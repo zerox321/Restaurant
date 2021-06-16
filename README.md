@@ -38,13 +38,6 @@ Go to the [Releases](https://github.com/zerox321/Resturant/releases) to download
 - [Timber](https://github.com/JakeWharton/timber) - logging.
 - [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, cardView.
 
-## Unit Testing Frameworks
-Unit Tests verify the interactions of viewmodels between repositories and dao & REST api requests.
-- [Robolectric](https://github.com/robolectric/robolectric) - Robolectric is the industry-standard unit testing framework for Android.
-- [Mockito-Kotlin](https://github.com/nhaarman/mockito-kotlin) - a small library that provides helper functions to work with Mockito in Kotlin.
-
-![screenshot555159853](https://user-images.githubusercontent.com/24237865/79233416-cb12d700-7ea3-11ea-9a17-a4a732c379f4.png)
-
 ## Architecture
 Resturant is based on MVVM architecture and a repository pattern.
 
@@ -52,11 +45,11 @@ Resturant is based on MVVM architecture and a repository pattern.
 
 
 ## Find this repository useful? :heart:
-[follow](https://github.com/zerox321)__ me for my next creations! 🤩
+[follow](https://github.com/zerox321) me for my next creations! 🤩
 
 # License
 ```xml
-Designed and developed by 2021 Zerox321 (Eslam Kamel)
+Designed and developed by 2021 zerox321 (Eslam Kamel)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
