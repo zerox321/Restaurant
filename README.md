@@ -46,18 +46,17 @@ Unit Tests verify the interactions of viewmodels between repositories and dao & 
 ![screenshot555159853](https://user-images.githubusercontent.com/24237865/79233416-cb12d700-7ea3-11ea-9a17-a4a732c379f4.png)
 
 ## Architecture
-MarvelHeroes is based on MVVM architecture and a repository pattern.
+Resturant is based on MVVM architecture and a repository pattern.
 
 ![architecture](https://user-images.githubusercontent.com/24237865/77502018-f7d36000-6e9c-11ea-92b0-1097240c8689.png)
 
 
 ## Find this repository useful? :heart:
-Support it by joining __[stargazers](https://github.com/skydoves/MarvelHeroes/stargazers)__ for this repository. :star: <br>
-And __[follow](https://github.com/skydoves)__ me for my next creations! 🤩
+[follow](https://github.com/zerox321)__ me for my next creations! 🤩
 
 # License
 ```xml
-Designed and developed by 2020 skydoves (Jaewoong Eum)
+Designed and developed by 2021 Zerox321 (Eslam Kamel)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
