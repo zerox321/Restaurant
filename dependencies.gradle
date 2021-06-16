@@ -1,0 +1,74 @@
+ext.versions = [
+        minSdk                   : 21,
+        compileSdk               : 30,
+        buildToolsVersion        : '30.0.2',
+        versionCode              : 1,
+        versionName              : '1.0.0',
+
+        // gradle plugins
+        gradleBuildTool          : '4.1.0',
+        spotlessGradle           : '3.26.1',
+        versionPlugin            : '0.23.0',
+
+        // kotlin
+        kotlin                   : '1.4.30',
+        core                     : '1.5.0',
+
+        // support library
+        appcompatVersion         : '1.3.0',
+        materialVersion          : '1.3.0',
+        constraintlayoutVersion  : '2.0.4',
+        navigationVersion  : '2.3.5',
+
+        // architecture components
+        activityKtxVersion       : '1.1.0',
+        fragmentKtxVersion       : '1.2.1',
+        activityVersion          : '1.1.0-rc03',
+        archCompomentVersion     : '2.1.0',
+        lifecycleVersion         : '2.2.0',
+        roomVersion              : '2.3.0',
+
+        // di
+        daggerVersion            : '2.26',
+
+        // service locator
+        koinVersion              : '2.0.1',
+
+        // network
+        retrofitVersion          : '2.9.0',
+        okhttpVersion            : '5.0.0-alpha.2',
+        gsonVersion              : '2.8.6',
+
+        // coroutines
+        coroutinesVersion        : '1.3.9',
+
+        // glide
+        glideVersion             : '4.12.0',
+        glidePaletteVersion      : '2.1.2',
+
+        // adapter
+        baseAdapter              : '0.1.3',
+
+        // whatIf
+        whatIfVersion            : '1.0.4',
+
+        // timestamp
+        threetenabpVersion       : '1.3.0',
+
+        // custom view
+        androidRibbonVersion     : '1.0.2',
+        flourishVersion          : '1.0.0',
+        expandableTextViewVersion: '0.1.4',
+
+        // debugging
+        timberVersion            : '4.7.1',
+
+        // unit test
+        junitVersion             : '4.13.1',
+        androidxTest             : '1.3.0',
+        unitTestCoreVersion      : '1.2.0',
+        robolectricVersion       : '4.4',
+        androidxTestRules        : '1.2.0-alpha04',
+        mockWebServerVersion     : '3.9.0',
+        mockitoKotlinVersion     : '2.2.0'
+]

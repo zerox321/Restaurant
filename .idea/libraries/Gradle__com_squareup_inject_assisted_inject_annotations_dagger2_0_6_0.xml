@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.inject:assisted-inject-annotations-dagger2:0.6.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.inject/assisted-inject-annotations-dagger2/0.6.0/7cecafc786a9b17781674cceffbdb753d5cea9e0/assisted-inject-annotations-dagger2-0.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.inject/assisted-inject-annotations-dagger2/0.6.0/219a724585a766a494b0c6d76fef45f9131fc8b7/assisted-inject-annotations-dagger2-0.6.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.inject/assisted-inject-annotations-dagger2/0.6.0/5dc7dbfc93356aad1bc00a21367f471f050b3e8f/assisted-inject-annotations-dagger2-0.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

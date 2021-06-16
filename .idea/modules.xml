@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Resturant.iml" filepath="$PROJECT_DIR$/.idea/modules/Resturant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Resturant.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Resturant.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataLayer/Resturant.dataLayer.iml" filepath="$PROJECT_DIR$/.idea/modules/dataLayer/Resturant.dataLayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domainLayer/Resturant.domainLayer.iml" filepath="$PROJECT_DIR$/.idea/modules/domainLayer/Resturant.domainLayer.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+include ':domainLayer'
+include ':dataLayer'
+include ':app'
+rootProject.name = "Resturant"

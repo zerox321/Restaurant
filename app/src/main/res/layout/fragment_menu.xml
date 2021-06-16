@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.mvvmEx.ui.menu.MenuViewModel" />
+
+        <variable
+            name="OfferAdapter"
+            type="com.example.mvvmEx.ui.menu.adapter.MenuAdapter" />
+
+    </data>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bindSwipeRefreshLayoutColor="@{true}"
+        app:onRefreshListener="@{() -> viewModel.fetchMenuList()}"
+        app:refreshing="@{viewModel.isLoading()}"
+        tools:context=".ui.menu.MenuFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            app:adapter="@{OfferAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            tools:listitem="@layout/menu_row_item" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

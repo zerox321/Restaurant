@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="Item"
+            type="com.example.datalayer.MenuItem" />
+
+        <variable
+            name="ClickListener"
+            type="com.example.mvvmEx.ui.menu.adapter.MenuAdapter.ClickListener" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:onClick="@{(v)->ClickListener.onItemClick(v,Item)}">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ImageView"
+            android:layout_width="@dimen/menu_iv_w"
+            android:layout_height="@dimen/menu_iv_h"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:loadImage="@{Item.thumbnail}"
+            app:loadImageProgress="@{progressImage}"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progressImage"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/CircularProgress"
+            app:layout_constraintBottom_toBottomOf="@+id/ImageView"
+            app:layout_constraintEnd_toEndOf="@+id/ImageView"
+            app:layout_constraintStart_toStartOf="@+id/ImageView"
+            app:layout_constraintTop_toTopOf="@+id/ImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:text="@{Item.name}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/mainFont"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/descriptionTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ImageView"
+            app:layout_constraintTop_toTopOf="@+id/ImageView"
+            tools:text="Salmon Teriyaki" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descriptionTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:padding="8dp"
+            android:text="@{Item.description}"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/secontFont"
+            app:layout_constraintBottom_toBottomOf="@+id/ImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ImageView"
+            app:layout_constraintTop_toTopOf="@+id/ImageView"
+            tools:text="Roasted salon dumped in soa sauce and mint" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/priceTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="8dp"
+            android:text="@{Item.formattedPrice}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/secontFont"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ImageView"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTv"
+            tools:text="150" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
