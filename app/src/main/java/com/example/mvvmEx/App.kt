@@ -14,7 +14,6 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        S
         //  logger in Debug Only
         if (BuildConfig.DEBUG)
             Timber.plant(Timber.DebugTree())

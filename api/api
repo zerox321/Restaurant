@@ -3,55 +3,55 @@
 		"name": "Salmon Teriyaki",
 		"description": "Roasted salon dumped in soa sauce and mint",
 		"price": 140,
-		"thumbnail": "https://api.androidhive.info/images/food/1.jpg"
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/1.jpg?raw=true"
 	},
 	{
 		"id": 2,
 		"name": "Grilled Mushroom and Vegetables",
 		"description": "Spcie grills mushrooms, cucumber, apples and lot more",
 		"price": 150,
-		"thumbnail": "https://api.androidhive.info/images/food/2.jpg"
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/2.jpg?raw=true"
 	},
 	{
 		"id": 3,
 		"name": "Chicken Overload Meal",
 		"description": "Grilled chicken & tandoori chicken in masala curry",
 		"price": 185,
-		"thumbnail": "https://api.androidhive.info/images/food/3.jpg"
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/3.jpg?raw=true"
 	},
 	{
 		"id": 4,
 		"name": "Chinese Egg Fry",
 		"description": "Exotic eggs Fried served steaming hot",
 		"price": 250,
-		"thumbnail": "https://api.androidhive.info/images/food/4.jpg"
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/4.jpg?raw=true"
 	},
 	{
 		"id": 5,
 		"name": "Chicken Wraps",
 		"description": "Grilled chicken tikka rool wrapped",
 		"price": 140,
-		"thumbnail": "https://api.androidhive.info/images/food/5.jpg"
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/5.jpg?raw=true"
 	},
 	{
 		"id": 6,
 		"name": "Veggie Delight",
 		"description": "Loads of veggies with olives",
 		"price": 230,
-		"thumbnail": "https://api.androidhive.info/images/food/6.jpg"
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/6.jpg?raw=true"
 	},
  	{
 		"id": 7,
 		"name": "Seafood Combo",
 		"description": "combo of prawns, scallop, sliced fish, calanmari, potato fries",
 		"price": 330,
-		"thumbnail": "https://api.androidhive.info/images/food/7.jpg"
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/7.jpg?raw=true"
 	},
 	{
 		"id": 8,
 		"name": "Full Tandoori",
 		"description": "Chicken roated with lip smacking mayo dressing",
 		"price": 430,
-		"thumbnail": "https://api.androidhive.info/images/food/8.jpg"
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/8.jpg?raw=true"
 	}
 ]

@@ -25,10 +25,10 @@ android {
 
     buildTypes {
         release {
-            buildConfigField 'String', 'baseUrl', '"https://raw.githubusercontent.com/zerox321/Cab-Booking-Demo/master/"'
+            buildConfigField 'String', 'baseUrl', '"https://raw.githubusercontent.com/zerox321/Resturant/master/api/"'
         }
         debug {
-            buildConfigField 'String', 'baseUrl', '"https://raw.githubusercontent.com/zerox321/Cab-Booking-Demo/master/"'
+            buildConfigField 'String', 'baseUrl', '"https://raw.githubusercontent.com/zerox321/Resturant/master/api/"'
         }
     }
 
