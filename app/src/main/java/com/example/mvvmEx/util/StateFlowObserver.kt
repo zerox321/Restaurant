@@ -1,4 +1,4 @@
-package com.example.baseproject.util
+package com.example.mvvmEx.util
 
 import androidx.lifecycle.LifecycleCoroutineScope
 import kotlinx.coroutines.flow.Flow

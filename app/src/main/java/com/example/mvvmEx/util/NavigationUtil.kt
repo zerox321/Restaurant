@@ -37,17 +37,6 @@ object NavigationUtil {
             .setPopExitAnim(R.anim.nav_default_pop_exit_anim)
             .build()
 
-    fun NavController.clearNavigateStack(destinationId: Int? = null) {
-        try {
-            if (destinationId != null)
-                this.popBackStack(destinationId, false)
-            else
-                this.popBackStack()
 
-
-        } catch (t: Throwable) {
-            Timber.e("Multiple navigation attempts handled. $t")
-        }
-    }
 
 }

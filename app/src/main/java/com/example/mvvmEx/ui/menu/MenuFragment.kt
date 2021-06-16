@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.example.baseproject.util.StateFlowObserver.flowObserver
 import com.example.datalayer.MenuItem
 import com.example.mvvmEx.R
 import com.example.mvvmEx.binding.bindListDecoration
@@ -16,6 +15,7 @@ import com.example.mvvmEx.databinding.FragmentMenuBinding
 import com.example.mvvmEx.ui.menu.adapter.MenuAdapter
 import com.example.mvvmEx.util.NavigationUtil.findNavigationController
 import com.example.mvvmEx.util.NavigationUtil.navigateTo
+import com.example.mvvmEx.util.StateFlowObserver.flowObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 
