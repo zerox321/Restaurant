@@ -1,0 +1,57 @@
+[{
+		"id": 1,
+		"name": "Salmon Teriyaki",
+		"description": "Roasted salon dumped in soa sauce and mint",
+		"price": 140,
+		"thumbnail": "https://api.androidhive.info/images/food/1.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Grilled Mushroom and Vegetables",
+		"description": "Spcie grills mushrooms, cucumber, apples and lot more",
+		"price": 150,
+		"thumbnail": "https://api.androidhive.info/images/food/2.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Chicken Overload Meal",
+		"description": "Grilled chicken & tandoori chicken in masala curry",
+		"price": 185,
+		"thumbnail": "https://api.androidhive.info/images/food/3.jpg"
+	},
+	{
+		"id": 4,
+		"name": "Chinese Egg Fry",
+		"description": "Exotic eggs Fried served steaming hot",
+		"price": 250,
+		"thumbnail": "https://api.androidhive.info/images/food/4.jpg"
+	},
+	{
+		"id": 5,
+		"name": "Chicken Wraps",
+		"description": "Grilled chicken tikka rool wrapped",
+		"price": 140,
+		"thumbnail": "https://api.androidhive.info/images/food/5.jpg"
+	},
+	{
+		"id": 6,
+		"name": "Veggie Delight",
+		"description": "Loads of veggies with olives",
+		"price": 230,
+		"thumbnail": "https://api.androidhive.info/images/food/6.jpg"
+	},
+ 	{
+		"id": 7,
+		"name": "Seafood Combo",
+		"description": "combo of prawns, scallop, sliced fish, calanmari, potato fries",
+		"price": 330,
+		"thumbnail": "https://api.androidhive.info/images/food/7.jpg"
+	},
+	{
+		"id": 8,
+		"name": "Full Tandoori",
+		"description": "Chicken roated with lip smacking mayo dressing",
+		"price": 430,
+		"thumbnail": "https://api.androidhive.info/images/food/8.jpg"
+	}
+]
