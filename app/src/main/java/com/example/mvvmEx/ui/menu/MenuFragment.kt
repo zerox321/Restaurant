@@ -10,7 +10,6 @@ import androidx.lifecycle.lifecycleScope
 import com.example.datalayer.MenuItem
 import com.example.mvvmEx.BuildConfig
 import com.example.mvvmEx.R
-import com.example.mvvmEx.binding.bindListDecoration
 import com.example.mvvmEx.core.BaseFragment
 import com.example.mvvmEx.core.BaseResponse
 import com.example.mvvmEx.databinding.FragmentMenuBinding

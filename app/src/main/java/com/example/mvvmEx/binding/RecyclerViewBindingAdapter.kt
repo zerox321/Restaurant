@@ -1,20 +1,11 @@
 package com.example.mvvmEx.binding
 
-import android.graphics.drawable.Drawable
 import android.view.View
-import android.widget.ImageView
-import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.DataSource
-import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.target.Target
 import com.example.mvvmEx.R
+import com.facebook.shimmer.ShimmerFrameLayout
 
 @BindingAdapter("bindSwipeRefreshLayoutColor")
 fun SwipeRefreshLayout.bindSwipeRefreshLayoutColor(attach: Boolean?) {
@@ -27,12 +18,15 @@ fun SwipeRefreshLayout.bindSwipeRefreshLayoutColor(attach: Boolean?) {
     setColorSchemeColors(c1, c2, c3, c4, c5)
 }
 
-@BindingAdapter("bindListDecoration")
-fun RecyclerView.bindListDecoration(drawableRes: Int) {
-    val drawable = ContextCompat.getDrawable(context, drawableRes) ?: return
-    val divider = DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL)
-    divider.setDrawable(drawable)
-    addItemDecoration(divider)
+@BindingAdapter("bindShimmer")
+fun ShimmerFrameLayout.bindShimmer(isLoading: Boolean) {
+    visibility = if (isLoading) {
+        startShimmer()
+        View.VISIBLE
+    } else {
+        stopShimmer()
+        View.GONE
+    }
 
 }
 

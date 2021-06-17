@@ -88,6 +88,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
 
+    implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+
 
 
 }

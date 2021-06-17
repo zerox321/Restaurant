@@ -10,5 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#E7E7E7</color>
     <color name="text_shadow">#7F000000</color>
+    <color name="shimmer_place_holder">#C8C8C8</color>
 
 </resources>
