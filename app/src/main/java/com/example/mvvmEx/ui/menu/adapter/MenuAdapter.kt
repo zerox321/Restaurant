@@ -10,6 +10,7 @@ import com.example.mvvmEx.databinding.MenuRowItemBinding
 
 class MenuAdapter(private val clickListener: MenuClickListener? = null) :
     ListAdapter<MenuItem, MenuViewHolder>(MenuDiffCallback) {
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

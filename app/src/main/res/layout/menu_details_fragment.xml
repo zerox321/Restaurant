@@ -40,7 +40,8 @@
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
                     app:loadImage="@{Item.thumbnail}"
-                    app:loadImageProgress="@{progressImage}" />
+                    app:loadImageProgress="@{progressImage}"
+                    tools:srcCompat="@tools:sample/avatars" />
 
                 <androidx.core.widget.ContentLoadingProgressBar
                     android:id="@+id/progressImage"

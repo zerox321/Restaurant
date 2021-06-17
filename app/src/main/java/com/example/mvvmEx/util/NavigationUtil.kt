@@ -27,7 +27,7 @@ object NavigationUtil {
     fun NavController.navigateTo(
         id: Int,
         args: Bundle? = null,
-        navOptions: NavOptions? = options,
+        navOptions: NavOptions = options,
         extras: Navigator.Extras? = null
     ) {
         try {

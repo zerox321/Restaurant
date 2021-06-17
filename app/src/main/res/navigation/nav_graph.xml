@@ -20,7 +20,7 @@
         android:id="@+id/OrderDetailsFragment"
         android:name="com.example.mvvmEx.ui.menu.details.MenuDetailsFragment"
         android:label="{title}"
-        tools:layout="@layout/order_details_fragment">
+        tools:layout="@layout/menu_details_fragment">
 
 
         <argument
