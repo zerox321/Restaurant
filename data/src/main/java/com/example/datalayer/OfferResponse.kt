@@ -9,9 +9,10 @@ data class MenuItem(
     val id: Int? = 0,
     val rate: Float? = 0f,
     val name: String? = "",
-    val color: String? = "",
+    val color: String? = "#E8AEB1",
     val price: Double? = 0.0,
     val thumbnail: String? = ""
 ) : Parcelable {
     fun getFormattedPrice() = "₹ $price"
 }
+

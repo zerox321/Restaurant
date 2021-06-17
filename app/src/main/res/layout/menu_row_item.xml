@@ -20,7 +20,6 @@
         android:layout_height="wrap_content"
         android:onClick="@{(v)->ClickListener.onItemClick(v,Item)}"
         app:cardBackgroundColor="@{Color.parseColor(Item.color)}"
-
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         app:cardPreventCornerOverlap="true"
