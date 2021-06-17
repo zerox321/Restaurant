@@ -53,8 +53,8 @@ android {
 
 dependencies {
 
-    implementation project(":dataLayer")
-    implementation project(":domainLayer")
+    implementation project(':data')
+    implementation project(':domain')
 
     implementation "androidx.appcompat:appcompat:$versions.appcompatVersion"
 

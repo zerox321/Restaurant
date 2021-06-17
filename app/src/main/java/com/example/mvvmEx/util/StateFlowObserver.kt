@@ -6,11 +6,15 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.filterNotNull
 
 object StateFlowObserver {
-    fun <T : Any> flowObserver(
+
+    fun <T : Any> nonNullFlowObserver(
         scope: LifecycleCoroutineScope,
         flow: Flow<T?>,
         result: (T) -> Unit
     ) {
-        scope.launchWhenStarted { flow.filterNotNull().collect { response -> result(response) } }
+        scope.launchWhenStarted {
+            flow.filterNotNull().collect { response -> result(response) }
+        }
     }
+
 }

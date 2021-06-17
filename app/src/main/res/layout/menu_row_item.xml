@@ -11,7 +11,7 @@
 
         <variable
             name="ClickListener"
-            type="com.example.mvvmEx.ui.menu.adapter.MenuAdapter.ClickListener" />
+            type="com.example.mvvmEx.ui.menu.adapter.MenuClickListener" />
     </data>
 
 
@@ -73,7 +73,8 @@
             android:padding="8dp"
             android:text="@{Item.description}"
             android:textAlignment="viewStart"
-            android:textSize="@dimen/secontFont"
+            android:textColor="@color/black"
+            android:textSize="@dimen/secondFont"
             app:layout_constraintBottom_toBottomOf="@+id/ImageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ImageView"
@@ -89,7 +90,7 @@
             android:text="@{Item.formattedPrice}"
             android:textAlignment="viewStart"
             android:textColor="@color/purple_700"
-            android:textSize="@dimen/secontFont"
+            android:textSize="@dimen/mainFont"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ImageView"
             app:layout_constraintEnd_toEndOf="parent"

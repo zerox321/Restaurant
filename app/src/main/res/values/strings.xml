@@ -4,5 +4,6 @@
     <string name="name">Name</string>
     <string name="description">Description</string>
     <string name="price">Price</string>
+    <string name="no_internet">"No Internet "</string>
 
 </resources>

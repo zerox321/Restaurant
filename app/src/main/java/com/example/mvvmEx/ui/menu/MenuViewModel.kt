@@ -10,15 +10,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MenuViewModel @Inject constructor(private val repo: MenuRepo) : BaseViewModel() {
-
     val response: StateFlow<BaseResponse<List<MenuItem>>?> = repo.response.asStateFlow()
-
+    fun fetchMenuList() = launchTask { repo.getMenu() }
 
     init {
         fetchMenuList()
     }
-
-    fun fetchMenuList() = launchTask { repo.getMenu() }
-
-
 }

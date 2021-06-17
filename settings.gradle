@@ -1,4 +1,4 @@
-include ':domainLayer'
-include ':dataLayer'
+include ':domain'
+include ':data'
 include ':app'
 rootProject.name = "Resturant"

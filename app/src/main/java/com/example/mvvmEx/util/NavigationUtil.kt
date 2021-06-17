@@ -13,6 +13,14 @@ import timber.log.Timber
 
 object NavigationUtil {
 
+    private val options =
+        NavOptions.Builder()
+            .setEnterAnim(R.anim.nav_default_enter_anim)
+            .setExitAnim(R.anim.nav_default_exit_anim)
+            .setPopEnterAnim(R.anim.nav_default_pop_enter_anim)
+            .setPopExitAnim(R.anim.nav_default_pop_exit_anim)
+            .build()
+
     fun View.findNavigationController() = this.findNavController()
 
 
@@ -28,15 +36,6 @@ object NavigationUtil {
             Timber.e("Multiple navigation attempts handled. $t")
         }
     }
-
-    private val options =
-        NavOptions.Builder()
-            .setEnterAnim(R.anim.nav_default_enter_anim)
-            .setExitAnim(R.anim.nav_default_exit_anim)
-            .setPopEnterAnim(R.anim.nav_default_pop_enter_anim)
-            .setPopExitAnim(R.anim.nav_default_pop_exit_anim)
-            .build()
-
 
 
 }

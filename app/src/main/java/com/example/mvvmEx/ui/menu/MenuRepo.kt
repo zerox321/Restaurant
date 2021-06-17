@@ -10,17 +10,11 @@ import kotlinx.coroutines.flow.emitAll
 import javax.inject.Inject
 
 @ViewModelScoped
-class MenuRepo @Inject constructor(
-    private val menuService: MenuService
-) : BaseRepository() {
-
+class MenuRepo @Inject constructor(private val menuService: MenuService) : BaseRepository() {
     val response = MutableStateFlow<BaseResponse<List<MenuItem>>?>(null)
 
     suspend fun getMenu() = response.emitAll(flow = buildApi { buildMenuResponse() })
-
-
-    private suspend fun buildMenuResponse(): List<MenuItem> =
-        menuService.getMenu()
+    private suspend fun buildMenuResponse(): List<MenuItem> = menuService.getMenu()
 
 
 }

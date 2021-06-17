@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Resturant.iml" filepath="$PROJECT_DIR$/.idea/modules/Resturant.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Resturant.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Resturant.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataLayer/Resturant.dataLayer.iml" filepath="$PROJECT_DIR$/.idea/modules/dataLayer/Resturant.dataLayer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domainLayer/Resturant.domainLayer.iml" filepath="$PROJECT_DIR$/.idea/modules/domainLayer/Resturant.domainLayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataLayer/Resturant.data.iml" filepath="$PROJECT_DIR$/.idea/modules/dataLayer/Resturant.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domainLayer/Resturant.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domainLayer/Resturant.domain.iml" />
     </modules>
   </component>
 </project>
