@@ -38,7 +38,6 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu),
         return binding {
             viewModel = this@MenuFragment.viewModel
             offerAdapter = this@MenuFragment.menuAdapter
-            recyclerView.bindListDecoration(R.drawable.recycler_list_line_divider)
         }.root
     }
 

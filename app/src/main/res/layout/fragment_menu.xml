@@ -20,8 +20,8 @@
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:bindSwipeRefreshLayoutColor="@{true}"
         app:onRefreshListener="@{() -> viewModel.fetchMenuList()}"
         app:refreshing="@{viewModel.isLoading()}"
@@ -31,7 +31,7 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:scrollbars="vertical"
             app:adapter="@{OfferAdapter}"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"

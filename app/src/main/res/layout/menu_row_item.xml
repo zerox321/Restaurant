@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="android.graphics.Color" />
 
         <variable
             name="Item"
@@ -14,92 +15,105 @@
             type="com.example.mvvmEx.ui.menu.adapter.MenuClickListener" />
     </data>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:onClick="@{(v)->ClickListener.onItemClick(v,Item)}">
+        android:onClick="@{(v)->ClickListener.onItemClick(v,Item)}"
+        app:cardBackgroundColor="@{Color.parseColor(Item.color)}"
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ImageView"
-            android:layout_width="@dimen/menu_iv_w"
-            android:layout_height="@dimen/menu_iv_h"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:loadImage="@{Item.thumbnail}"
-            app:loadImageProgress="@{progressImage}"
-            tools:srcCompat="@tools:sample/avatars" />
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
 
-        <androidx.core.widget.ContentLoadingProgressBar
-            android:id="@+id/progressImage"
-            style="@style/Widget.AppCompat.ProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:theme="@style/CircularProgress"
-            app:layout_constraintBottom_toBottomOf="@+id/ImageView"
-            app:layout_constraintEnd_toEndOf="@+id/ImageView"
-            app:layout_constraintStart_toStartOf="@+id/ImageView"
-            app:layout_constraintTop_toTopOf="@+id/ImageView" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/titleTv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:padding="8dp"
-            android:singleLine="true"
-            android:text="@{Item.name}"
-            android:textAlignment="viewStart"
-            android:textColor="@color/purple_500"
-            android:textSize="@dimen/mainFont"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/descriptionTv"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ImageView"
-            app:layout_constraintTop_toTopOf="@+id/ImageView"
-            tools:text="Salmon Teriyaki" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ImageView"
+                android:layout_width="@dimen/menu_iv"
+                android:layout_height="@dimen/menu_iv"
+                android:layout_margin="16dp"
+                android:elevation="8dp"
+                android:scaleType="fitXY"
+                android:translationZ="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:loadImage="@{Item.thumbnail}"
+                app:loadImageProgress="@{progressImage}"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                tools:srcCompat="@tools:sample/avatars" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/descriptionTv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:minLines="2"
-            android:padding="8dp"
-            android:text="@{Item.description}"
-            android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="@dimen/secondFont"
-            app:layout_constraintBottom_toBottomOf="@+id/ImageView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ImageView"
-            app:layout_constraintTop_toTopOf="@+id/ImageView"
-            tools:text="Roasted salon dumped in soa sauce and mint" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/priceTv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:padding="8dp"
-            android:text="@{Item.formattedPrice}"
-            android:textAlignment="viewStart"
-            android:textColor="@color/purple_700"
-            android:textSize="@dimen/mainFont"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/ImageView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ImageView"
-            app:layout_constraintTop_toBottomOf="@+id/descriptionTv"
-            tools:text="150" />
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/progressImage"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/CircularProgress"
+                app:layout_constraintBottom_toBottomOf="@+id/ImageView"
+                app:layout_constraintEnd_toEndOf="@+id/ImageView"
+                app:layout_constraintStart_toStartOf="@+id/ImageView"
+                app:layout_constraintTop_toTopOf="@+id/ImageView" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/priceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@{Item.formattedPrice}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/secondFont"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/ImageView"
+                app:layout_constraintStart_toStartOf="@+id/ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ImageView"
+                tools:text="150" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:text="@{Item.name}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mainFont"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/ImageView"
+                app:layout_constraintStart_toStartOf="@+id/ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/priceTv"
+                tools:text="Salmon Teriyaki" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:rating="@{Item.rate}"
+                android:theme="@style/RatingBar"
+                app:layout_constraintEnd_toEndOf="@+id/ImageView"
+                app:layout_constraintStart_toStartOf="@+id/ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/titleTv" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/addIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/ratingBar"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+                app:srcCompat="@drawable/ic_plus" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 </layout>
 
 

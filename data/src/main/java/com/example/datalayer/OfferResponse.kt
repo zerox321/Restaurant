@@ -7,7 +7,9 @@ import kotlinx.android.parcel.Parcelize
 data class MenuItem(
     val description: String? = "",
     val id: Int? = 0,
+    val rate: Float? = 0f,
     val name: String? = "",
+    val color: String? = "",
     val price: Double? = 0.0,
     val thumbnail: String? = ""
 ) : Parcelable {
