@@ -81,14 +81,13 @@
             app:layout_constraintTop_toTopOf="@+id/recyclerView"
             tools:visibility="gone">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-
                 <include layout="@layout/menu_item_placeholder_layout" />
                 <include layout="@layout/menu_item_placeholder_layout" />
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </com.facebook.shimmer.ShimmerFrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
