@@ -1,4 +1,4 @@
-<h1 align="center">Resturant</h1>
+<h1 align="center">Restaurant</h1>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">  
-Resturant is a demo application based on modern Android application tech-stacks and MVVM architecture.<br>
+Restaurant is a demo application based on modern Android application tech-stacks and MVVM architecture.<br>
 Fetching data from the network via repository pattern.
 </p>
 </br>

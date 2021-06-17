@@ -1,7 +1,7 @@
 [{
 		"id": 1,
 		"name": "Salmon Teriyaki",
-		"rate": 3.5,
+		"rate": 4.5,
 		"color": "#CFA9AB",
 		"description": "Roasted salon dumped in soa sauce and mint",
 		"price": 140,
@@ -20,7 +20,7 @@
 	{
 		"id": 3,
 		"name": "Chicken Overload Meal",
-		"rate": 3.5,
+		"rate": 2.5,
 		"color": "#CFA9AB",
 		"description": "Grilled chicken & tandoori chicken in masala curry",
 		"price": 185,
@@ -29,7 +29,7 @@
 	{
 		"id": 4,
 		"name": "Chinese Egg Fry",
-		"rate": 3.5,
+		"rate": 4,
 		"color": "#E8AEB1",
 		"description": "Exotic eggs Fried served steaming hot",
 		"price": 250,
@@ -38,7 +38,7 @@
 	{
 		"id": 5,
 		"name": "Chicken Wraps",
-		"rate": 3.5,
+		"rate": 5,
 		"color": "#CFA9AB",
 		"description": "Grilled chicken tikka rool wrapped",
 		"price": 140,
