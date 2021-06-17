@@ -8,6 +8,8 @@ import androidx.navigation.fragment.navArgs
 import com.example.mvvmEx.R
 import com.example.mvvmEx.core.BaseFragment
 import com.example.mvvmEx.databinding.MenuDetailsFragmentBinding
+import com.example.mvvmEx.util.NavigationUtil.findNavigationController
+import com.example.mvvmEx.util.NavigationUtil.popStack
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -22,6 +24,7 @@ class MenuDetailsFragment :
     ): View {
         super.onCreateView(inflater, container, savedInstanceState)
         return binding {
+            backIV.setOnClickListener { v -> v.findNavigationController().popStack() }
             item = this@MenuDetailsFragment.args.Item
         }.root
     }

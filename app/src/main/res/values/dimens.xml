@@ -1,7 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="headerFont">18sp</dimen>
-    <dimen name="mainFont">15sp</dimen>
-    <dimen name="secondFont">12sp</dimen>
-    <dimen name="menu_iv">170dp</dimen>
+    <dimen name="headerFont">25sp</dimen>
+    <dimen name="mainFont">17sp</dimen>
+    <dimen name="secondFont">14sp</dimen>
+    <dimen name="menu_iv">160dp</dimen>
 </resources>

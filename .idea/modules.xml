@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Resturant.iml" filepath="$PROJECT_DIR$/.idea/modules/Resturant.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Resturant.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Resturant.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataLayer/Resturant.data.iml" filepath="$PROJECT_DIR$/.idea/modules/dataLayer/Resturant.data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domainLayer/Resturant.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domainLayer/Resturant.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Restaurant.iml" filepath="$PROJECT_DIR$/.idea/modules/Restaurant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Restaurant.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Restaurant.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Restaurant.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Restaurant.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/Restaurant.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/Restaurant.domain.iml" />
     </modules>
   </component>
 </project>

@@ -25,8 +25,6 @@
     <style name="Theme.BaseProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-
-
     <style name="CircularProgress" parent="Theme.AppCompat.Light">
         <item name="colorAccent">@color/purple_500</item>
         <item name="android:scaleX">0.7</item>
@@ -42,6 +40,11 @@
         <item name="colorControlNormal">@color/white</item>
         <item name="colorControlActivated">@color/white</item>
     </style>
+    <style name="BrownRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/purple_500</item>
+        <item name="colorControlActivated">@color/purple_700</item>
+    </style>
+
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">10%</item>
     </style>

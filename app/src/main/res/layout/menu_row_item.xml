@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="android.graphics.Color" />
 
         <variable
@@ -20,21 +21,22 @@
         android:layout_height="wrap_content"
         android:onClick="@{(v)->ClickListener.onItemClick(v,Item)}"
         app:cardBackgroundColor="@{Color.parseColor(Item.color)}"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="@dimen/fab_margin"
         app:cardElevation="4dp"
         app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true">
+        app:cardUseCompatPadding="true"
+        tools:cardBackgroundColor="#E8AEB1">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:padding="@dimen/fab_margin">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ImageView"
                 android:layout_width="@dimen/menu_iv"
                 android:layout_height="@dimen/menu_iv"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/fab_margin"
                 android:elevation="8dp"
                 android:scaleType="fitXY"
                 android:translationZ="8dp"
@@ -62,24 +64,28 @@
                 android:id="@+id/priceTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/fab_margin"
                 android:text="@{Item.formattedPrice}"
-                android:textColor="@color/black"
+                android:textColor="@color/purple_700"
                 android:textSize="@dimen/secondFont"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/ImageView"
                 app:layout_constraintStart_toStartOf="@+id/ImageView"
                 app:layout_constraintTop_toBottomOf="@+id/ImageView"
-                tools:text="150" />
+                tools:text="$150" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/titleTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/fab_margin"
                 android:gravity="center"
                 android:maxLines="2"
                 android:minLines="2"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
                 android:text="@{Item.name}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/mainFont"
@@ -105,7 +111,8 @@
                 android:id="@+id/addIV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:paddingBottom="@dimen/fab_margin"
                 app:layout_constraintEnd_toEndOf="@+id/ratingBar"
                 app:layout_constraintStart_toStartOf="@+id/ratingBar"
                 app:layout_constraintTop_toBottomOf="@+id/ratingBar"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":domain" external.linked.project.path="$MODULE_DIR$/../../../domain" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="Resturant" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":domain" external.linked.project.path="$MODULE_DIR$/../../../domain" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="Restaurant" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
@@ -62,8 +62,8 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
-    <output url="file://$MODULE_DIR$/../../../domainLayer/build/intermediates/javac/debug/classes" />
-    <output-test url="file://$MODULE_DIR$/../../../domainLayer/build/intermediates/javac/debugUnitTest/classes" />
+    <output url="file://$MODULE_DIR$/../../../domain/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../domain/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../domain">
       <sourceFolder url="file://$MODULE_DIR$/../../../domain/src/main/java" isTestSource="false" />
@@ -115,6 +115,6 @@
     <orderEntry type="library" name="Gradle: androidx.core:core:1.5.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1@aar" level="project" />
-    <orderEntry type="module" module-name="Resturant.data" />
+    <orderEntry type="module" module-name="Restaurant.data" />
   </component>
 </module>

@@ -12,137 +12,120 @@
 
     </data>
 
-    <androidx.core.widget.NestedScrollView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
+        android:layout_margin="8dp"
         tools:context=".ui.menu.details.MenuDetailsFragment">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="@dimen/fab_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ImageView"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:elevation="8dp"
+            android:scaleType="fitXY"
+            android:translationZ="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIV"
+            app:loadImage="@{Item.thumbnail}"
+            app:loadImageProgress="@{progressImage}"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progressImage"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:theme="@style/CircularProgress"
+            app:layout_constraintBottom_toBottomOf="@+id/ImageView"
+            app:layout_constraintEnd_toEndOf="@+id/ImageView"
+            app:layout_constraintStart_toStartOf="@+id/ImageView"
+            app:layout_constraintTop_toTopOf="@+id/ImageView" />
 
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardView"
-                android:layout_width="0dp"
-                android:layout_height="270dp"
-                app:cardElevation="4dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="@{Item.name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/headerFont"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageView"
+            tools:text="Salmon Teriyaki" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ImageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    app:loadImage="@{Item.thumbnail}"
-                    app:loadImageProgress="@{progressImage}"
-                    tools:srcCompat="@tools:sample/avatars" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/priceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@{Item.formattedPrice}"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/mainFont"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTv"
+            tools:text="$150" />
 
-                <androidx.core.widget.ContentLoadingProgressBar
-                    android:id="@+id/progressImage"
-                    style="@style/Widget.AppCompat.ProgressBar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:scaleX="0.6"
-                    android:scaleY="0.6"
-                    android:theme="@style/CircularProgress" />
-            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/addressTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/fab_margin"
-                android:layout_marginEnd="@dimen/fab_margin"
-                android:padding="8dp"
-                android:text="@string/name"
-                android:textColor="@color/purple_500"
-                android:textSize="@dimen/mainFont"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:rating="@{Item.rate}"
+            android:theme="@style/BrownRatingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceTv" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/titleTv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="@dimen/fab_margin"
-                android:text="@{Item.name}"
-                android:textAlignment="viewStart"
-                android:textColor="@color/black"
-                android:textSize="@dimen/secondFont"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/addressTitle"
-                app:layout_constraintTop_toBottomOf="@+id/addressTitle" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/descriptionTitleTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/fab_margin"
-                android:layout_marginTop="7dp"
-                android:layout_marginEnd="@dimen/fab_margin"
-                android:padding="8dp"
-                android:text="@string/description"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descriptionTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:gravity="center"
+            android:text="@{Item.description}"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/headerFont"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+            tools:text="combo of prawns, scallop, sliced fish, calanmari, potato fries" />
 
-                android:textColor="@color/purple_500"
-                android:textSize="@dimen/mainFont"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titleTv" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/addIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTv"
+            app:srcCompat="@drawable/ic_plus" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/descriptionTv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="@dimen/fab_margin"
-                android:text="@{Item.description}"
-                android:textAlignment="viewStart"
-                android:textColor="@color/black"
-                android:textSize="@dimen/secondFont"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/descriptionTitleTv"
-                app:layout_constraintTop_toBottomOf="@+id/descriptionTitleTv" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/priceTitleTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/fab_margin"
-                android:layout_marginTop="7dp"
-                android:layout_marginEnd="@dimen/fab_margin"
-                android:padding="8dp"
-                android:text="@string/price"
-                android:textColor="@color/purple_500"
-                android:textSize="@dimen/mainFont"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/descriptionTv" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/priceTv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="@dimen/fab_margin"
-                android:text="@{Item.formattedPrice}"
-                android:textAlignment="viewStart"
-                android:textColor="@color/black"
-                android:textSize="@dimen/mainFont"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/priceTitleTv"
-                app:layout_constraintTop_toBottomOf="@+id/priceTitleTv" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

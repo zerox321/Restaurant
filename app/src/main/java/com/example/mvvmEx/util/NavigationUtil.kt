@@ -8,6 +8,7 @@ import androidx.navigation.NavOptions
 import androidx.navigation.Navigator
 import androidx.navigation.findNavController
 import com.example.mvvmEx.R
+import com.example.mvvmEx.util.NavigationUtil.navigateTo
 import timber.log.Timber
 
 
@@ -24,6 +25,14 @@ object NavigationUtil {
     fun View.findNavigationController() = this.findNavController()
 
 
+    fun NavController.popStack(
+    ){
+        try {
+            this.popBackStack()
+        } catch (t: Throwable) {
+            Timber.e("Multiple navigation attempts handled. $t")
+        }
+    }
     fun NavController.navigateTo(
         id: Int,
         args: Bundle? = null,

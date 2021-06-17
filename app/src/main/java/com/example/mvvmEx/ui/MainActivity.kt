@@ -3,7 +3,6 @@ package com.example.mvvmEx.ui
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.example.mvvmEx.R
 import com.example.mvvmEx.core.BaseActivity
 import com.example.mvvmEx.databinding.ActivityMainBinding
@@ -23,10 +22,7 @@ class MainActivity : BaseActivity() {
 
     private fun bindView() {
         Timber.tag(TAG).e(" bindView start ")
-        binding.run {
-            setSupportActionBar(binding.toolbar)
-            NavigationUI.setupWithNavController(toolbar, navController)
-        }
+        binding.run {}
     }
 
 }

@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">Mvvm Example</string>
+    <string name="app_name">Restaurant App</string>
     <string name="menu">Menu</string>
     <string name="name">Name</string>
     <string name="description">Description</string>
     <string name="price">Price</string>
     <string name="no_internet">"No Internet "</string>
+    <string name="app_content">❤ A sample Restaurant application based on MVVM (ViewModel, Coroutines, Flow, Repository, Hilt) architecture</string>
 
 </resources>
