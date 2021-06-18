@@ -1,6 +1,6 @@
 package com.example.mvvmEx.ui.menu
 
-import com.example.datalayer.MenuItem
+import com.example.datalayer.model.MenuItem
 import com.example.domainlayer.remote.MenuService
 import com.example.mvvmEx.core.BaseRepository
 import com.example.mvvmEx.core.BaseResponse

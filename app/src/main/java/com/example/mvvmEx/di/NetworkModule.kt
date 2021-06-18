@@ -1,6 +1,6 @@
 package com.example.mvvmEx.di
 
-import com.example.datalayer.EndPoint
+import com.example.datalayer.constants.Constant
 import com.example.domainlayer.BuildConfig.baseUrl
 import com.example.domainlayer.remote.RequestInterceptor
 import com.example.mvvmEx.BuildConfig
@@ -47,9 +47,9 @@ object NetworkModule {
     ): OkHttpClient {
         return OkHttpClient.Builder().apply {
 
-            connectTimeout(EndPoint.timeOut, TimeUnit.SECONDS)
-            readTimeout(EndPoint.timeOut, TimeUnit.SECONDS)
-            writeTimeout(EndPoint.timeOut, TimeUnit.SECONDS)
+            connectTimeout(Constant.timeOut, TimeUnit.SECONDS)
+            readTimeout(Constant.timeOut, TimeUnit.SECONDS)
+            writeTimeout(Constant.timeOut, TimeUnit.SECONDS)
 
             addInterceptor(requestInterceptor)
             addInterceptor(loggingInterceptor)

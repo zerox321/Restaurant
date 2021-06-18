@@ -1,11 +1,9 @@
 package com.example.mvvmEx.ui.menu.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.example.datalayer.MenuItem
+import com.example.datalayer.model.MenuItem
 import com.example.mvvmEx.databinding.MenuRowItemBinding
 
 class MenuAdapter(private val clickListener: MenuClickListener? = null) :

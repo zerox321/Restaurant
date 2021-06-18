@@ -1,11 +1,11 @@
 [{
-		"id": 1,
-		"name": "Salmon Teriyaki",
-		"rate": 4.5,
+	"id": 1,
+		"name": "Chicken Overload Meal",
+		"rate": 2.5,
 		"color": "#CFA9AB",
-		"description": "Roasted salon dumped in soa sauce and mint",
-		"price": 140,
-		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/1.jpg?raw=true"
+		"description": "Grilled chicken & tandoori chicken in masala curry",
+		"price": 185,
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/3.jpg?raw=true"	
 
 	},
 	{
@@ -18,13 +18,14 @@
 		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/2.jpg?raw=true"
 	},
 	{
+		
 		"id": 3,
-		"name": "Chicken Overload Meal",
-		"rate": 2.5,
+		"name": "Salmon Teriyaki",
+		"rate": 4.5,
 		"color": "#CFA9AB",
-		"description": "Grilled chicken & tandoori chicken in masala curry",
-		"price": 185,
-		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/3.jpg?raw=true"
+		"description": "Roasted salon dumped in soa sauce and mint",
+		"price": 140,
+		"thumbnail": "https://github.com/zerox321/Resturant/blob/master/api/1.jpg?raw=true"
 	},
 	{
 		"id": 4,

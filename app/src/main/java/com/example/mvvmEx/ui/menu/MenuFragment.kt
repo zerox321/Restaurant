@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.example.datalayer.MenuItem
+import com.example.datalayer.model.MenuItem
 import com.example.mvvmEx.BuildConfig
 import com.example.mvvmEx.R
 import com.example.mvvmEx.core.BaseFragment

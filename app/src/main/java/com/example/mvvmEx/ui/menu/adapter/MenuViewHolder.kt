@@ -1,7 +1,7 @@
 package com.example.mvvmEx.ui.menu.adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.datalayer.MenuItem
+import com.example.datalayer.model.MenuItem
 import com.example.mvvmEx.databinding.MenuRowItemBinding
 
 class MenuViewHolder(

@@ -85,7 +85,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
+
                 <include layout="@layout/menu_item_placeholder_layout" />
+
                 <include layout="@layout/menu_item_placeholder_layout" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </com.facebook.shimmer.ShimmerFrameLayout>

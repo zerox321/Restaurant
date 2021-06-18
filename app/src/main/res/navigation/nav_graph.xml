@@ -25,7 +25,7 @@
 
         <argument
             android:name="Item"
-            app:argType="com.example.datalayer.MenuItem" />
+            app:argType="com.example.datalayer.model.MenuItem" />
         <argument
             android:name="title"
             app:argType="string" />

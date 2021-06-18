@@ -17,10 +17,7 @@ class RequestInterceptor @Inject constructor() : Interceptor {
             addHeader("Accept", "application/json")
             addHeader("Content-Type", "application/json")
         }
-
         val request = requestBuilder.build()
-        val response = chain.proceed(request)
-       val code= response.code//status code
-        return response
+        return chain.proceed(request)
     }
 }

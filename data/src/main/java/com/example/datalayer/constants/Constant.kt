@@ -1,6 +1,6 @@
-package com.example.datalayer
+package com.example.datalayer.constants
 
-object EndPoint {
+object Constant {
 
     const val timeOut = 60L
 

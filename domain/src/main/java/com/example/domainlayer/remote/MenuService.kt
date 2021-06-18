@@ -1,7 +1,7 @@
 package com.example.domainlayer.remote
 
-import com.example.datalayer.EndPoint.urlConstant
-import com.example.datalayer.MenuItem
+import com.example.datalayer.constants.Constant.urlConstant
+import com.example.datalayer.model.MenuItem
 import retrofit2.http.GET
 
 

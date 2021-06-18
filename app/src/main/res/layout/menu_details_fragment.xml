@@ -7,7 +7,7 @@
 
         <variable
             name="Item"
-            type="com.example.datalayer.MenuItem" />
+            type="com.example.datalayer.model.MenuItem" />
 
 
     </data>
@@ -52,6 +52,7 @@
             app:layout_constraintStart_toStartOf="@+id/ImageView"
             app:layout_constraintTop_toTopOf="@+id/ImageView"
             tools:visibility="invisible">
+
             <include layout="@layout/image_place_holder" />
         </com.facebook.shimmer.ShimmerFrameLayout>
 

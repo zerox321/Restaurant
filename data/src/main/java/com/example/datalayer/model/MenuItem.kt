@@ -1,4 +1,4 @@
-package com.example.datalayer
+package com.example.datalayer.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

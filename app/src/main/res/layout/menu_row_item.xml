@@ -9,7 +9,7 @@
 
         <variable
             name="Item"
-            type="com.example.datalayer.MenuItem" />
+            type="com.example.datalayer.model.MenuItem" />
 
         <variable
             name="ClickListener"
