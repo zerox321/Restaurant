@@ -17,7 +17,7 @@ Fetching data from the network via repository pattern.
 ## Download
 Go to the [Releases](https://github.com/zerox321/Resturant/releases) to download the latest APK.
 
-<img src="/api/Screenrecorder-2021-06-16-15-31.gif" align="right" width="32%"/>
+<img src="/api/gif.gif" align="right" width="32%"/>
 
 ## Tech stack & Open-source libraries
 - Minimum SDK level 21
