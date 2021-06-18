@@ -13,7 +13,7 @@ Fetching data from the network via repository pattern.
 </br>
 
 <p align="center">
-<img src="/previews/screenshot.png"/>
+<img src="/api/preview.png"/>
 </p>
 
 ## Download
