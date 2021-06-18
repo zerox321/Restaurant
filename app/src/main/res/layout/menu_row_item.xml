@@ -37,27 +37,28 @@
                 android:layout_width="@dimen/menu_iv"
                 android:layout_height="@dimen/menu_iv"
                 android:layout_margin="@dimen/fab_margin"
-                android:elevation="8dp"
                 android:scaleType="fitXY"
-                android:translationZ="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:loadImage="@{Item.thumbnail}"
-                app:loadImageProgress="@{progressImage}"
+                app:loadImageShimmer="@{shimmerFrameLayout}"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
                 tools:srcCompat="@tools:sample/avatars" />
 
-            <androidx.core.widget.ContentLoadingProgressBar
-                android:id="@+id/progressImage"
-                style="@style/Widget.AppCompat.ProgressBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:theme="@style/CircularProgress"
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerFrameLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:animateLayoutChanges="true"
                 app:layout_constraintBottom_toBottomOf="@+id/ImageView"
                 app:layout_constraintEnd_toEndOf="@+id/ImageView"
                 app:layout_constraintStart_toStartOf="@+id/ImageView"
-                app:layout_constraintTop_toTopOf="@+id/ImageView" />
+                app:layout_constraintTop_toTopOf="@+id/ImageView"
+                tools:visibility="invisible">
+
+                <include layout="@layout/image_place_holder" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
 
 
             <androidx.appcompat.widget.AppCompatTextView

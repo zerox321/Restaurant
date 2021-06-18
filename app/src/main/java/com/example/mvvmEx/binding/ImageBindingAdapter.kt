@@ -1,24 +1,25 @@
 package com.example.mvvmEx.binding
 
 import android.graphics.drawable.Drawable
-import android.view.View
 import android.widget.ImageView
-import android.widget.ProgressBar
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.facebook.shimmer.ShimmerFrameLayout
 
 
-@BindingAdapter(value = ["loadImage", "loadImageProgress"], requireAll = false)
+@BindingAdapter(value = ["loadImage", "loadImageShimmer"], requireAll = false)
 fun ImageView.loadImage(
     imagePath: String?,
-    progress: ProgressBar? = null
+    shimmer: ShimmerFrameLayout? = null
 ) {
-    progress?.visibility = View.VISIBLE
+    shimmer?.bindShimmer(isLoading = true)
     Glide.with(this).load(imagePath)
+        .transition(DrawableTransitionOptions.withCrossFade())
         .listener(object : RequestListener<Drawable> {
             override fun onLoadFailed(
                 e: GlideException?,
@@ -26,7 +27,7 @@ fun ImageView.loadImage(
                 target: Target<Drawable>?,
                 isFirstResource: Boolean
             ): Boolean {
-                progress?.visibility = View.INVISIBLE
+                shimmer?.bindShimmer(isLoading = false)
                 return false
             }
 
@@ -37,7 +38,7 @@ fun ImageView.loadImage(
                 dataSource: DataSource?,
                 isFirstResource: Boolean
             ): Boolean {
-                progress?.visibility = View.INVISIBLE
+                shimmer?.bindShimmer(isLoading = false)
                 return false
             }
 

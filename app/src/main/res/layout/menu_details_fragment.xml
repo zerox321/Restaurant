@@ -23,8 +23,8 @@
             android:id="@+id/backIV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="?android:attr/selectableItemBackground"
-            android:padding="@dimen/fab_margin"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_back" />
@@ -33,30 +33,27 @@
             android:id="@+id/ImageView"
             android:layout_width="270dp"
             android:layout_height="270dp"
-            android:elevation="8dp"
             android:scaleType="fitXY"
-            android:translationZ="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/backIV"
             app:loadImage="@{Item.thumbnail}"
-            app:loadImageProgress="@{progressImage}"
+            app:loadImageShimmer="@{shimmerFrameLayout}"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
             tools:srcCompat="@tools:sample/avatars" />
 
-        <androidx.core.widget.ContentLoadingProgressBar
-            android:id="@+id/progressImage"
-            style="@style/Widget.AppCompat.ProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:scaleX="0.6"
-            android:scaleY="0.6"
-            android:theme="@style/CircularProgress"
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerFrameLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:animateLayoutChanges="true"
             app:layout_constraintBottom_toBottomOf="@+id/ImageView"
             app:layout_constraintEnd_toEndOf="@+id/ImageView"
             app:layout_constraintStart_toStartOf="@+id/ImageView"
-            app:layout_constraintTop_toTopOf="@+id/ImageView" />
+            app:layout_constraintTop_toTopOf="@+id/ImageView"
+            tools:visibility="invisible">
+            <include layout="@layout/image_place_holder" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
 
 
         <androidx.appcompat.widget.AppCompatTextView

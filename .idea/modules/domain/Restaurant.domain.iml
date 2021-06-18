@@ -26,17 +26,16 @@
       </configuration>
     </facet>
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="4" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
+      <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
         <compilerSettings>
           <option name="additionalArguments" value="-Xallow-no-source-files" />
         </compilerSettings>
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/../../../domain/build/tmp/kotlin-classes/debug" />
-          <option name="classpath" value="$MODULE_DIR$/../../../domain/build/intermediates/compile_r_class_jar/debug/R.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/caa44bc86bd0faf484c25ea6ead21e1c/jetified-converter-gson-2.9.0.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/6bf2b3f25ab2fc68ca0fb75b9e38ed39/jetified-retrofit-2.9.0.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/14d7ecf10f19b70dd680a893dc374834/jetified-logging-interceptor-5.0.0-alpha.2.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/f2af38496456975f11b99631ace215ea/jetified-javax.inject-1.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/08dd804e80c2dbb68031eefe9599e5c9/jetified-timber-4.7.1-api.jar:/home/gadp/AndroidStudioProjects/Mvvm Example/data/build/intermediates/compile_library_classes_jar/debug/classes.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/87e57e8e91f09f0f3b9f20049dd6ad83/jetified-okhttp-5.0.0-alpha.2.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/5196c1f5b191a3801ab6019db4770ae9/jetified-kotlin-stdlib-jdk8-1.4.21.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/11b02de1c7c9c2ca153e9e1004354a75/jetified-core-ktx-1.5.0-api.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/a117b1357e518f4f711f1f20d798b2bb/jetified-okio-jvm-2.9.0.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/914a8c5660d21bfec30712384568b49b/jetified-kotlin-stdlib-jdk7-1.4.21.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/32b066052e3ba253357ed3240d6d4889/jetified-kotlin-stdlib-1.4.31.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/beefe3e2f44fb74f6bc1f5b492a3a841/jetified-kotlin-stdlib-common-1.4.31.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/ae55c21a0ca1b6384db3d3ee9dc2d7eb/jetified-annotations-16.0.1.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/dd17707d0a86bd971b7b40e78e40a2ca/jetified-gson-2.8.6.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/0ee692e15b053c3cdef7b06517d602b8/core-1.5.0-api.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/17133fbcf6ad0412e3fa8f7250ac98e2/lifecycle-runtime-2.0.0-api.jar:/home/gadp/.gradle/caches/transforms-2/files-2.1/6e4e38825de414824b553a615e4f6944/versionedparcelable-1.1.1-api.jar:/home/gadp/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.0.0/e070ffae07452331bc5684734fce6831d531785c/lifecycle-common-2.0.0.jar:/home/gadp/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.0.0/bb21b9a11761451b51624ac428d1f1bb5deeac38/core-common-2.0.0.jar:/home/gadp/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar:/home/gadp/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.2.0/57136ff68ee784c6e19db34ed4a175338fadfde1/annotation-1.2.0.jar:/home/gadp/Android/Sdk/platforms/android-30/android.jar" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/transforms-2/files-2.1/caa44bc86bd0faf484c25ea6ead21e1c/jetified-converter-gson-2.9.0.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/6bf2b3f25ab2fc68ca0fb75b9e38ed39/jetified-retrofit-2.9.0.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/14d7ecf10f19b70dd680a893dc374834/jetified-logging-interceptor-5.0.0-alpha.2.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/f2af38496456975f11b99631ace215ea/jetified-javax.inject-1.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/08dd804e80c2dbb68031eefe9599e5c9/jetified-timber-4.7.1-api.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/87e57e8e91f09f0f3b9f20049dd6ad83/jetified-okhttp-5.0.0-alpha.2.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/5196c1f5b191a3801ab6019db4770ae9/jetified-kotlin-stdlib-jdk8-1.4.21.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/11b02de1c7c9c2ca153e9e1004354a75/jetified-core-ktx-1.5.0-api.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/a117b1357e518f4f711f1f20d798b2bb/jetified-okio-jvm-2.9.0.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/914a8c5660d21bfec30712384568b49b/jetified-kotlin-stdlib-jdk7-1.4.21.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/32b066052e3ba253357ed3240d6d4889/jetified-kotlin-stdlib-1.4.31.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/beefe3e2f44fb74f6bc1f5b492a3a841/jetified-kotlin-stdlib-common-1.4.31.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/ae55c21a0ca1b6384db3d3ee9dc2d7eb/jetified-annotations-16.0.1.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/dd17707d0a86bd971b7b40e78e40a2ca/jetified-gson-2.8.6.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/0ee692e15b053c3cdef7b06517d602b8/core-1.5.0-api.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/17133fbcf6ad0412e3fa8f7250ac98e2/lifecycle-runtime-2.0.0-api.jar;C:/Users/eslam/.gradle/caches/transforms-2/files-2.1/6e4e38825de414824b553a615e4f6944/versionedparcelable-1.1.1-api.jar;C:/Users/eslam/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.0.0/e070ffae07452331bc5684734fce6831d531785c/lifecycle-common-2.0.0.jar;C:/Users/eslam/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.0.0/bb21b9a11761451b51624ac428d1f1bb5deeac38/core-common-2.0.0.jar;C:/Users/eslam/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar;C:/Users/eslam/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.2.0/57136ff68ee784c6e19db34ed4a175338fadfde1/annotation-1.2.0.jar;C:/Users/eslam/AppData/Local/Android/Sdk/platforms/android-30/android.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="domain_debug" />
-          <option name="jvmTarget" value="1.6" />
           <option name="languageVersion" value="1.4" />
           <option name="apiVersion" value="1.4" />
           <option name="pluginOptions">
@@ -76,6 +75,9 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../domain/build/generated/source/kaptKotlin/debugAndroidTest" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../domain/build/generated/source/kaptKotlin/debugUnitTest" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../domain/build/generated/res/resValues/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../domain/build/generated/source/kaptKotlin/debug" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../domain/build/generated/source/kaptKotlin/debugAndroidTest" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../domain/build/generated/source/kaptKotlin/debugUnitTest" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../domain/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../domain/build" />
     </content>
@@ -85,11 +87,11 @@
     <orderEntry type="module-library">
       <library name="Gradle: kaptGeneratedClasses">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/release" />
-          <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/releaseUnitTest" />
-          <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/debugAndroidTest" />
-          <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/debugUnitTest" />
           <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/debug" />
+          <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/debugUnitTest" />
+          <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/release" />
+          <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/debugAndroidTest" />
+          <root url="file://$MODULE_DIR$/../../../domain/build/tmp/kapt3/classes/releaseUnitTest" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
