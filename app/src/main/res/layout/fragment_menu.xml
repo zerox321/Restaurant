@@ -31,7 +31,7 @@
             android:layout_margin="@dimen/fab_margin"
             android:padding="7dp"
             android:text="@string/app_name"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/primaryDark"
             android:textSize="@dimen/headerFont"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"

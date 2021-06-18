@@ -14,7 +14,9 @@
         android:theme="@style/Theme.BaseProject"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".ui.MainActivity">
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/Theme.BaseProject">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/fab_margin"
                 android:text="@{Item.formattedPrice}"
-                android:textColor="@color/purple_700"
+                android:textColor="@color/primaryDark"
                 android:textSize="@dimen/secondFont"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/ImageView"
