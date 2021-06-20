@@ -1,13 +1,17 @@
 package com.example.mvvmEx.di
 
+import android.content.Context
 import com.example.datalayer.constants.Constant
+import com.example.datalayer.constants.Constant.CACHE_SIZE
 import com.example.domainlayer.BuildConfig.baseUrl
 import com.example.domainlayer.remote.RequestInterceptor
 import com.example.mvvmEx.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -37,11 +41,17 @@ object NetworkModule {
     fun provideRequestInterceptor(): RequestInterceptor {
         return RequestInterceptor()
     }
+    //Hilt Provide Network Cache
+    @Provides
+    @Singleton
+    fun provideCache(@ApplicationContext context: Context): Cache =
+        Cache(context.cacheDir, CACHE_SIZE)
 
     //Hilt Provide Network OkHttpClient
     @Provides
     @Singleton
     fun provideOkHttpClient(
+        cache: Cache,
         requestInterceptor: RequestInterceptor,
         loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
@@ -53,6 +63,7 @@ object NetworkModule {
 
             addInterceptor(requestInterceptor)
             addInterceptor(loggingInterceptor)
+            cache(cache)
 
         }.build()
 
