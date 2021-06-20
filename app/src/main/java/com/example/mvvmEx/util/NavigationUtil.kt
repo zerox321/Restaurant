@@ -24,8 +24,7 @@ object NavigationUtil {
     fun View.findNavigationController() = this.findNavController()
 
 
-    fun NavController.popStack(
-    ) {
+    fun NavController.popStack() {
         try {
             this.popBackStack()
         } catch (t: Throwable) {

@@ -13,13 +13,9 @@ import com.facebook.shimmer.ShimmerFrameLayout
 
 
 @BindingAdapter(value = ["loadImage", "loadImageShimmer"], requireAll = false)
-fun ImageView.loadImage(
-    imagePath: String?,
-    shimmer: ShimmerFrameLayout? = null
-) {
+fun ImageView.loadImage(imagePath: String?, shimmer: ShimmerFrameLayout? = null) {
     shimmer?.bindShimmer(isLoading = true)
-    Glide.with(this).load(imagePath)
-        .transition(DrawableTransitionOptions.withCrossFade())
+    Glide.with(this).load(imagePath).transition(DrawableTransitionOptions.withCrossFade())
         .listener(object : RequestListener<Drawable> {
             override fun onLoadFailed(
                 e: GlideException?,

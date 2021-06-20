@@ -9,7 +9,6 @@ import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {
 
-    protected val TAG: String = javaClass.simpleName
 
     private val defaultDispatcher = Dispatchers.Main
     private val defaultScope = viewModelScope

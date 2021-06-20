@@ -29,9 +29,7 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu),
     private val menuAdapter: MenuAdapter = MenuAdapter(this)
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         super.onCreateView(inflater, container, savedInstanceState)
         return binding {
