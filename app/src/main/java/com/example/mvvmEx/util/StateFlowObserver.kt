@@ -4,7 +4,6 @@ import androidx.lifecycle.LifecycleCoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.filterNotNull
-import kotlinx.coroutines.launch
 
 object StateFlowObserver {
 
@@ -13,7 +12,7 @@ object StateFlowObserver {
         flow: Flow<T?>,
         result: (T) -> Unit
     ) {
-        scope.launch {
+        scope.launchWhenStarted {
             flow.filterNotNull().collect { response -> result(response) }
         }
     }

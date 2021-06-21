@@ -47,7 +47,7 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu),
             result = { response ->
                 when (response) {
                     is BaseResponse.Loading -> viewModel.setLoading(response.loading)
-                    is BaseResponse.Success -> menuAdapter.submitList(response.data)
+                    is BaseResponse.Success -> onSuccess(response.data)
                     is BaseResponse.Error -> onError(response.throwable)
                 }
             }
@@ -55,7 +55,13 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu),
 
     }
 
+    private fun onSuccess(menuList: List<MenuItem>) {
+        viewModel.setLoading(false)
+        menuAdapter.submitList(menuList)
+    }
+
     private fun onError(throwable: Throwable) {
+        viewModel.setLoading(false)
 
         val errorMessage = if (BuildConfig.DEBUG) "${throwable.message}"
         else context?.getString(R.string.no_internet)
