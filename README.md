@@ -23,7 +23,7 @@ Go to the [Releases](https://github.com/zerox321/Resturant/releases) to download
 - Minimum SDK level 21
 - [Kotlin](https://kotlinlang.org/) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) for asynchronous.
 - JetPack
-  - LiveData - notify domain layer data to views.
+  - Kotlin flows  - notify domain layer data to views.
   - Lifecycle - dispose of observing data when lifecycle state changes.
   - ViewModel - UI related data holder, lifecycle aware.
 - Architecture
@@ -34,6 +34,7 @@ Go to the [Releases](https://github.com/zerox321/Resturant/releases) to download
 - [OkHttp3](https://github.com/square/okhttp) - implementing interceptor, logging and mocking web server.
 - [Glide](https://github.com/bumptech/glide) - loading images.
 - [Timber](https://github.com/JakeWharton/timber) - logging.
+- [ShummerLayout](https://facebook.github.io/shimmer-android/) -  an Android library that provides an easy way to add a shimmer effect to any view in your Android app.
 - [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, cardView.
 
 ## Architecture
