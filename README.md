@@ -36,6 +36,7 @@ Go to the [Releases](https://github.com/zerox321/Resturant/releases) to download
 - [Timber](https://github.com/JakeWharton/timber) - logging.
 - [ShummerLayout](https://facebook.github.io/shimmer-android/) -  an Android library that provides an easy way to add a shimmer effect to any view in your Android app.
 - [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, cardView.
+- [Proguard-R8](https://developer.android.com/studio/build/shrink-code) - shrink Release to remove unused code and resources.
 
 ## Architecture
 Resturant is based on MVVM architecture and a repository pattern.
