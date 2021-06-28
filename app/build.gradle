@@ -27,7 +27,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -56,6 +57,7 @@ dependencies {
     implementation project(':data')
     implementation project(':domain')
 
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$versions.appcompatVersion"
 
     implementation "com.google.android.material:material:$versions.materialVersion"
@@ -73,11 +75,8 @@ dependencies {
 
     // Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
-
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
-    // When using Kotlin.
     kapt 'androidx.hilt:hilt-compiler:1.0.0'
 
 
