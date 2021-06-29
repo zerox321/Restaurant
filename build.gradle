@@ -3,14 +3,14 @@ buildscript {
     ext.kotlin_version = '1.4.31'
     ext.nav_version = "2.3.2"
 
-    ext.hilt_version = '2.33-beta'
+    ext.hilt_version = '2.35'
 
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath 'com.android.tools.build:gradle:4.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 

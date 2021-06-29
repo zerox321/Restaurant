@@ -11,15 +11,19 @@ plugins {
 apply from: '../dependencies.gradle'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildToolsVersion
+
 
     defaultConfig {
         applicationId "com.example.mvvmEx"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.compileSdk
+
+        versionCode versions.versionCode
+        versionName versions.versionName
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
 
