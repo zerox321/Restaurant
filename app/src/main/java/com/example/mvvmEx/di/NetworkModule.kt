@@ -24,14 +24,12 @@ object NetworkModule {
     //Hilt Provide Network Request Logger
     @Provides
     @Singleton
-    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
-        return HttpLoggingInterceptor().apply {
-            level =
-                if (BuildConfig.DEBUG)
-                    HttpLoggingInterceptor.Level.BODY
-                else
-                    HttpLoggingInterceptor.Level.NONE
-        }
+    fun provideLoggingInterceptor(): HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
+        level =
+            if (BuildConfig.DEBUG)
+                HttpLoggingInterceptor.Level.BODY
+            else
+                HttpLoggingInterceptor.Level.NONE
     }
 
     //Hilt Provide Network Cache
@@ -46,26 +44,22 @@ object NetworkModule {
     fun provideOkHttpClient(
         cache: Cache,
         loggingInterceptor: HttpLoggingInterceptor
-    ): OkHttpClient {
-        return OkHttpClient.Builder().apply {
+    ): OkHttpClient = OkHttpClient.Builder().apply {
 
-            connectTimeout(Constant.timeOut, TimeUnit.SECONDS)
-            readTimeout(Constant.timeOut, TimeUnit.SECONDS)
-            writeTimeout(Constant.timeOut, TimeUnit.SECONDS)
+        connectTimeout(Constant.timeOut, TimeUnit.SECONDS)
+        readTimeout(Constant.timeOut, TimeUnit.SECONDS)
+        writeTimeout(Constant.timeOut, TimeUnit.SECONDS)
 
-            addInterceptor(loggingInterceptor)
-            cache(cache)
+        addInterceptor(loggingInterceptor)
+        cache(cache)
 
-        }.build()
+    }.build()
 
-    }
 
     //Hilt Provide Network Response Gson Converter
     @Provides
     @Singleton
-    fun provideGsonConverterFactory(): GsonConverterFactory {
-        return GsonConverterFactory.create()
-    }
+    fun provideGsonConverterFactory(): GsonConverterFactory = GsonConverterFactory.create()
 
 
     //Hilt Provide Retrofit Builder
@@ -74,13 +68,12 @@ object NetworkModule {
     fun provideRetrofit(
         okHttpClient: OkHttpClient,
         converterFactory: GsonConverterFactory
-    ): Retrofit {
-        return Retrofit.Builder()
+    ): Retrofit =
+        Retrofit.Builder()
             .client(okHttpClient)
             .baseUrl(baseUrl)
             .addConverterFactory(converterFactory)
             .build()
-    }
 
 
 }

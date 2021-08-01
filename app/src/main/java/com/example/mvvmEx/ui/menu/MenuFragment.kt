@@ -64,7 +64,7 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu), 
     }
 
 
-    override fun onItemClick(extras: FragmentNavigator.Extras, args: Bundle) {
+    override fun onItemClick(args: Bundle, extras: FragmentNavigator.Extras) {
         navigateTo(
             id = R.id.action_MenuFragment_to_OrderDetailsFragment,
             args = args,

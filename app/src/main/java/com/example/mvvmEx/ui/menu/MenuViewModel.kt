@@ -15,6 +15,7 @@ class MenuViewModel @Inject constructor(private val repo: MenuRepo) : BaseViewMo
 
     val response: StateFlow<BaseResponse<List<MenuItem>>> = repo.response.asStateFlow()
 
+
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> get() = _isLoading
     fun setLoading(isLoading: Boolean) {

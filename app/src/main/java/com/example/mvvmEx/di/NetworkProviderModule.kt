@@ -15,9 +15,8 @@ object NetworkProviderModule {
     // provide MenuService with ViewModel Scope
     @Provides
     @ViewModelScoped
-    fun provideMenuService(retrofit: Retrofit): MenuService {
-        return retrofit.create(MenuService::class.java)
-    }
+    fun provideMenuService(retrofit: Retrofit): MenuService =
+        retrofit.create(MenuService::class.java)
 
 
 }
