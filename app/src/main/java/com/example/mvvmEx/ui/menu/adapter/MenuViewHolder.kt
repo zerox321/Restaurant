@@ -1,5 +1,6 @@
 package com.example.mvvmEx.ui.menu.adapter
 
+import android.os.Bundle
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.RecyclerView
 import com.example.datalayer.model.MenuItem
@@ -14,7 +15,10 @@ class MenuViewHolder(
         binding.item = item
         binding.root.setOnClickListener {
             clickListener.onItemClick(
-                item = item,
+                args = Bundle().apply {
+                    putString("title", item.name)
+                    putParcelable("menuItem", item)
+                },
                 extras = FragmentNavigatorExtras(
                     binding.ImageView to item.getImageSharedElementAnimation(),
                     binding.titleTv to item.getNameSharedElementAnimation()

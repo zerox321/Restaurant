@@ -12,7 +12,7 @@ import javax.inject.Inject
 @ViewModelScoped
 class MenuRepo @Inject constructor(private val menuService: MenuService) : BaseRepository() {
 
-    val response = MutableStateFlow<BaseResponse<List<MenuItem>>?>(null)
+    val response = MutableStateFlow<BaseResponse<List<MenuItem>>>(BaseResponse.None)
 
     suspend fun getMenu() = response.emitAll(flow = buildApi { menuService.getMenu() })
 

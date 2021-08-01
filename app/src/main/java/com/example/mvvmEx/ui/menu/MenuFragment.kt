@@ -16,8 +16,8 @@ import com.example.mvvmEx.ui.menu.adapter.MenuAdapter
 import com.example.mvvmEx.ui.menu.adapter.MenuClickListener
 import com.example.mvvmEx.util.ErrorHandler.showError
 import com.example.mvvmEx.util.NavigationUtil.navigateTo
-import com.example.mvvmEx.util.StateFlowObserver.nonNullFlowObserver
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
 
 
 @AndroidEntryPoint
@@ -39,17 +39,16 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu), 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Todo observe Menu response
-        nonNullFlowObserver(
-            scope = viewLifecycleOwner.lifecycleScope,
-            flow = viewModel.response,
-            result = { response ->
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+            viewModel.response.collect { response ->
                 when (response) {
                     is BaseResponse.Loading -> viewModel.setLoading(response.loading)
                     is BaseResponse.Success -> onSuccess(response.data)
                     is BaseResponse.Error -> onError(response.throwable)
+                    is BaseResponse.None -> Unit
                 }
             }
-        )
+        }
 
 
     }
@@ -65,13 +64,10 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu), 
     }
 
 
-    override fun onItemClick(item: MenuItem, extras: FragmentNavigator.Extras) {
+    override fun onItemClick(extras: FragmentNavigator.Extras, args: Bundle) {
         navigateTo(
             id = R.id.action_MenuFragment_to_OrderDetailsFragment,
-            args = Bundle().apply {
-                putString("title", item.name)
-                putParcelable("menuItem", item)
-            },
+            args = args,
             extras = extras
 
         )

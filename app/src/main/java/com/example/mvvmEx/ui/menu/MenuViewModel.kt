@@ -13,7 +13,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MenuViewModel @Inject constructor(private val repo: MenuRepo) : BaseViewModel() {
 
-    val response: StateFlow<BaseResponse<List<MenuItem>>?> = repo.response.asStateFlow()
+    val response: StateFlow<BaseResponse<List<MenuItem>>> = repo.response.asStateFlow()
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> get() = _isLoading
