@@ -14,5 +14,7 @@ data class MenuItem(
     val thumbnail: String? = ""
 ) : Parcelable {
     fun getFormattedPrice() = "₹ $price"
+    fun getImageSharedElementAnimation() = "anim_$thumbnail"
+    fun getNameSharedElementAnimation() = "anim_$name"
 }
 

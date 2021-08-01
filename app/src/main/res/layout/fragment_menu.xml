@@ -11,10 +11,6 @@
             name="viewModel"
             type="com.example.mvvmEx.ui.menu.MenuViewModel" />
 
-        <variable
-            name="OfferAdapter"
-            type="com.example.mvvmEx.ui.menu.adapter.MenuAdapter" />
-
     </data>
 
 
@@ -60,7 +56,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:scrollbars="vertical"
-            app:adapter="@{OfferAdapter}"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +69,7 @@
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
             android:orientation="horizontal"
-            app:bindShimmer="@{viewModel.isLoading()}"
+            app:bindShimmer="@{viewModel.loading}"
             app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
             app:layout_constraintEnd_toEndOf="@+id/recyclerView"
             app:layout_constraintStart_toStartOf="@+id/recyclerView"

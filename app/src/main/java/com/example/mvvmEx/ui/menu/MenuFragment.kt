@@ -4,29 +4,27 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.FragmentNavigator
 import com.example.datalayer.model.MenuItem
-import com.example.mvvmEx.BuildConfig
 import com.example.mvvmEx.R
 import com.example.mvvmEx.core.BaseFragment
 import com.example.mvvmEx.core.BaseResponse
 import com.example.mvvmEx.databinding.FragmentMenuBinding
 import com.example.mvvmEx.ui.menu.adapter.MenuAdapter
 import com.example.mvvmEx.ui.menu.adapter.MenuClickListener
-import com.example.mvvmEx.util.NavigationUtil.findNavigationController
+import com.example.mvvmEx.util.ErrorHandler.showError
 import com.example.mvvmEx.util.NavigationUtil.navigateTo
 import com.example.mvvmEx.util.StateFlowObserver.nonNullFlowObserver
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu),
-    MenuClickListener {
+class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu), MenuClickListener {
 
     private val viewModel by viewModels<MenuViewModel>()
-    private val menuAdapter: MenuAdapter = MenuAdapter(this)
+    private val menuAdapter: MenuAdapter by lazy { MenuAdapter(clickListener = this) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -34,7 +32,7 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu),
         super.onCreateView(inflater, container, savedInstanceState)
         return binding {
             viewModel = this@MenuFragment.viewModel
-            offerAdapter = this@MenuFragment.menuAdapter
+            recyclerView.adapter = this@MenuFragment.menuAdapter
         }.root
     }
 
@@ -53,6 +51,7 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu),
             }
         )
 
+
     }
 
     private fun onSuccess(menuList: List<MenuItem>) {
@@ -62,24 +61,20 @@ class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu),
 
     private fun onError(throwable: Throwable) {
         viewModel.setLoading(false)
-
-        val errorMessage = if (BuildConfig.DEBUG) "${throwable.message}"
-        else context?.getString(R.string.no_internet)
-
-        Toast.makeText(context ?: return, errorMessage, Toast.LENGTH_LONG).show()
+        throwable.showError(context = context ?: return)
     }
 
 
-    override fun onItemClick(v: View, item: MenuItem) {
-        val args = Bundle().apply {
-            putString("title", item.name)
-            putParcelable("Item", item)
-        }
-        v.findNavigationController()
-            .navigateTo(
-                id = R.id.action_MenuFragment_to_OrderDetailsFragment,
-                args = args
-            )
+    override fun onItemClick(item: MenuItem, extras: FragmentNavigator.Extras) {
+        navigateTo(
+            id = R.id.action_MenuFragment_to_OrderDetailsFragment,
+            args = Bundle().apply {
+                putString("title", item.name)
+                putParcelable("menuItem", item)
+            },
+            extras = extras
+
+        )
 
     }
 

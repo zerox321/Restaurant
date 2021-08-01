@@ -12,11 +12,11 @@ ext.versions = [
 
         // kotlin
         kotlin                   : '1.4.30',
-        core                     : '1.5.0',
+        core                     : '1.6.0',
 
         // support library
-        appcompatVersion         : '1.3.0',
-        materialVersion          : '1.3.0',
+        appcompatVersion         : '1.3.1',
+        materialVersion          : '1.4.0',
         constraintlayoutVersion  : '2.0.4',
         navigationVersion  : '2.3.5',
 

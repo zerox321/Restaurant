@@ -34,6 +34,7 @@
             android:layout_width="270dp"
             android:layout_height="270dp"
             android:scaleType="fitXY"
+            android:transitionName="@{Item.imageSharedElementAnimation}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/backIV"
@@ -65,6 +66,8 @@
             android:gravity="center"
             android:lineSpacingExtra="4dp"
             android:text="@{Item.name}"
+            android:transitionName="@{Item.nameSharedElementAnimation}"
+
             android:textColor="@color/black"
             android:textSize="@dimen/headerFont"
             android:textStyle="bold"

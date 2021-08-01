@@ -8,12 +8,10 @@ import kotlinx.coroutines.flow.onStart
 
 abstract class BaseRepository {
 
-    private val defaultDispatcher = Dispatchers.IO
-
     suspend fun <T : Any> buildApi(task: suspend () -> T) = flow<BaseResponse<T>> {
         emit(BaseResponse.Success(data = task()))
     }
-        .flowOn(defaultDispatcher)
+        .flowOn(Dispatchers.IO)
         .onStart { emit(BaseResponse.Loading(loading = true)) }
         .catch { throwable -> emit(BaseResponse.Error(throwable = throwable)) }
 

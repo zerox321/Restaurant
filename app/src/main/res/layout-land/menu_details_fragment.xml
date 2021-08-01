@@ -34,6 +34,7 @@
             android:layout_width="270dp"
             android:layout_height="270dp"
             android:scaleType="fitXY"
+            android:transitionName="@{Item.imageSharedElementAnimation}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/backIV"
             app:layout_constraintTop_toBottomOf="@+id/backIV"
@@ -66,8 +67,10 @@
             android:lineSpacingExtra="4dp"
             android:text="@{Item.name}"
             android:textColor="@color/black"
+
             android:textSize="@dimen/headerFont"
             android:textStyle="bold"
+            android:transitionName="@{Item.nameSharedElementAnimation}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ImageView"
             app:layout_constraintTop_toTopOf="@+id/ImageView"

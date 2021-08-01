@@ -6,16 +6,18 @@ import androidx.recyclerview.widget.ListAdapter
 import com.example.datalayer.model.MenuItem
 import com.example.mvvmEx.databinding.MenuRowItemBinding
 
-class MenuAdapter(private val clickListener: MenuClickListener? = null) :
+class MenuAdapter(private val clickListener: MenuClickListener) :
     ListAdapter<MenuItem, MenuViewHolder>(MenuDiffCallback) {
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): MenuViewHolder = MenuViewHolder(
-        binding = MenuRowItemBinding.inflate(LayoutInflater.from(parent.context), parent, false),
-        clickListener = clickListener
-    )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder =
+        MenuViewHolder(
+            binding = MenuRowItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            ),
+            clickListener = clickListener
+        )
 
 
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) =

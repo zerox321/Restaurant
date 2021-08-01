@@ -22,9 +22,8 @@
         android:label="{title}"
         tools:layout="@layout/menu_details_fragment">
 
-
         <argument
-            android:name="Item"
+            android:name="menuItem"
             app:argType="com.example.datalayer.model.MenuItem" />
         <argument
             android:name="title"

@@ -1,8 +1,8 @@
 package com.example.mvvmEx.ui.menu.adapter
 
-import android.view.View
+import androidx.navigation.fragment.FragmentNavigator
 import com.example.datalayer.model.MenuItem
 
 interface MenuClickListener {
-    fun onItemClick(v: View, item: MenuItem)
+    fun onItemClick(item: MenuItem, extras: FragmentNavigator.Extras)
 }

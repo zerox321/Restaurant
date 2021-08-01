@@ -4,7 +4,6 @@ import android.content.Context
 import com.example.datalayer.constants.Constant
 import com.example.datalayer.constants.Constant.CACHE_SIZE
 import com.example.domainlayer.BuildConfig.baseUrl
-import com.example.domainlayer.remote.RequestInterceptor
 import com.example.mvvmEx.BuildConfig
 import dagger.Module
 import dagger.Provides
@@ -35,12 +34,6 @@ object NetworkModule {
         }
     }
 
-    //Hilt Provide Network Interceptor
-    @Provides
-    @Singleton
-    fun provideRequestInterceptor(): RequestInterceptor {
-        return RequestInterceptor()
-    }
     //Hilt Provide Network Cache
     @Provides
     @Singleton
@@ -52,7 +45,6 @@ object NetworkModule {
     @Singleton
     fun provideOkHttpClient(
         cache: Cache,
-        requestInterceptor: RequestInterceptor,
         loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder().apply {
@@ -61,7 +53,6 @@ object NetworkModule {
             readTimeout(Constant.timeOut, TimeUnit.SECONDS)
             writeTimeout(Constant.timeOut, TimeUnit.SECONDS)
 
-            addInterceptor(requestInterceptor)
             addInterceptor(loggingInterceptor)
             cache(cache)
 
