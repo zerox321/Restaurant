@@ -1,0 +1,29 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Send email
+       uses: dawidd6/action-send-mail@v3.5.0
+       with:
+           server_address: smtp.gmail.com
+           server_port: 465
+           username: eslamesw@gmail.com
+           password: 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
+           subject: Github Actions job result
+           to: eslamesw@gmail.com,muhamed.helmy95@yahoo.com,muhamed.helmy95@gmail.com
+           from: Eslam kamel 
+           body: Build job of ${{github.repository}} completed successfully!
+           attachments: app/build/outputs/apk/debug/BaseDemo.apk
+           priority: high
+
+
